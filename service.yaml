@@ -7,6 +7,6 @@ spec:
     app: kubernetes-101-service
   ports :
   - port: 80
-    nodePort: 30006
+    nodePort: 30007
     targetPort: 8080
   type: NodePort 

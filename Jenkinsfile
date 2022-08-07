@@ -51,7 +51,7 @@ pipeline{
 							ret2 = sh ( script:'ssh premasai@127.0.0.1 kubectl get pods | grep kubernetes-101-* | awk \'{print $1}\'',returnStdout: true).trim()
 							println "${ret2}"	
 						        if (ret1 == "Running") {
-								      echo "execute portforward command on cosole: kubectl port-forward  ${ret2} 30006:3000"        
+								      echo "execute portforward command on cosole: kubectl port-forward  ${ret2} 30007:3000"        
 	     							}
 							     else {
 								      println "${ret1}"

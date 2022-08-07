@@ -40,6 +40,10 @@ pipeline{
 					
 					script{
 						try{
+							sh 'ssh premasai@127.0.0.1 kubectl apply -f deployment.yaml'
+							sleep 5
+							sh 'ssh premasai@127.0.0.1 kubectl apply -f service.yaml'
+							sleep 5
 							sh 'ssh premasai@127.0.0.1 kubectl get pods | grep kubernetes-101-*'
 							sleep 5
 							ret1 = sh ( script:'ssh premasai@127.0.0.1 kubectl get pods | grep kubernetes-101-* | awk \'{print $3}\'',returnStdout: true).trim()

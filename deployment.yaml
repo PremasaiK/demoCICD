@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: kubernetes-101
-          image: premasaik/kubernetes-101:v3
+          image: premasaik/kubernetes-101:v4
           ports:
             - name: http
               containerPort: 3000

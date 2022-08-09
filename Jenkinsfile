@@ -14,7 +14,7 @@ pipeline{
 
 			steps {
 				echo "${BUILD_NUMBER}"
-				sh 'docker build  --no-cache -t premasaik/kubernetes-101:latest .'
+				sh 'docker build  --no-cache -t premasaik/kubernetes-101:${BUILD_NUMBER} .'
 			}
 		}
 
@@ -28,7 +28,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push premasaik/kubernetes-101:latest'
+				sh 'docker push premasaik/kubernetes-101:${BUILD_NUMBER}'
 			}
 		}
     

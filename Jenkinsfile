@@ -13,6 +13,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
+				echo $BUILD_NUMBER
 				sh 'docker build  --no-cache -t premasaik/kubernetes-101:latest .'
 			}
 		}

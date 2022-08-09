@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kubernetes-101-v5
+  name: kubernetes-101-v01
   labels:
-    app: kubernetes-101-v5
+    app: kubernetes-101-v01
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: kubernetes-101-v5
+      app: kubernetes-101-v01
   template:
     metadata:
       labels:
-        app: kubernetes-101-v5
+        app: kubernetes-101-v01
     spec:
       containers:
-        - name: kubernetes-101-v5
-          image: premasaik/kubernetes-101:v4
+        - name: kubernetes-101-v01
+          image: premasaik/kubernetes-101:v01
           ports:
             - name: http
               containerPort: 3000

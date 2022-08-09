@@ -13,7 +13,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build  --no-cache -t premasaik/kubernetes-101:v4 .'
+				sh 'docker build  --no-cache -t premasaik/kubernetes-101:v9 .'
 			}
 		}
 
@@ -27,7 +27,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push premasaik/kubernetes-101:v4'
+				sh 'docker push premasaik/kubernetes-101:v49'
 			}
 		}
     

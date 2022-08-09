@@ -47,6 +47,8 @@ pipeline{
 							sleep 5
 							sh 'ssh premasai@127.0.0.1 kubectl apply -f service.yaml'
 							sleep 5
+							ret0 = sh ( script:'ssh premasai@127.0.0.1 kubectl get pods | grep  "kubernetes-101-*"\|Running" | awk \'{print $3}\'',returnStdout: true).trim()
+							println ret0
 							ret1 = sh ( script:'ssh premasai@127.0.0.1 kubectl get pods | grep  kubernetes-101-* |  sed -n 2p | awk \'{print $3}\'',returnStdout: true).trim()
 							println ret1
 							ret2 = sh ( script:'ssh premasai@127.0.0.1 kubectl get pods | grep  kubernetes-101-* |  sed -n 2p | awk \'{print $1}\'',returnStdout: true).trim()

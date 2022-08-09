@@ -27,7 +27,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push premasaik/kubernetes-101:v49'
+				sh 'docker push premasaik/kubernetes-101:v9'
 			}
 		}
     

@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: kubernetes-101-service
+  name: kubernetes-101-service-v5
 spec:
   selector:
-    app: kubernetes-101-service
+    app: kubernetes-101-service-v5
   ports :
   - port: 80
     nodePort: 30007

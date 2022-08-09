@@ -41,9 +41,9 @@ pipeline{
 					
 					script{
 						try{
-							sh 'ssh premasai@127.0.0.1 sed "s/{{BUILD_NUMBER}}/$BUILD_NUMBER/g" deployment.yaml'
-							sh 'ssh premasai@127.0.0.1 cat deployment.yaml'
-							sh 'ssh premasai@127.0.0.1 kubectl apply -f deployment.yaml'
+							sh 'ssh premasai@127.0.0.1 sed "s/{{BUILD_NUMBER}}/$BUILD_NUMBER/g" /home/premasai/deployment.yaml'
+							sh 'ssh premasai@127.0.0.1 cat /home/premasai/deployment.yaml'
+							sh 'ssh premasai@127.0.0.1 kubectl apply -f /home/premasai/deployment.yaml'
 							sleep 5
 							sh 'ssh premasai@127.0.0.1 kubectl apply -f service.yaml'
 							sleep 5
